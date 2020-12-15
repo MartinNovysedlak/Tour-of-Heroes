@@ -1,3 +1,4 @@
+import { ItemShopComponent } from './item-shop/item-shop.component';
 import { ItemsComponent } from './items/items.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'heroes', component: HeroesComponent },
   { path: 'items', component: ItemsComponent },
   { path: 'itemdetail/:id', component: ItemDetailComponent },
+  { path: 'buyitem/:id', component: ItemShopComponent},
 ];
 
 @NgModule({

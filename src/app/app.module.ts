@@ -11,6 +11,7 @@ import { MessagesComponent } from './messages/messages.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
+import { ItemShopComponent } from './item-shop/item-shop.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { ItemDetailComponent } from './item-detail/item-detail.component';
     HeroDetailComponent,
     MessagesComponent,
     ItemsComponent,
-    ItemDetailComponent
+    ItemDetailComponent,
+    ItemShopComponent
   ],
   bootstrap: [ AppComponent ]
 })
