@@ -12,12 +12,19 @@ import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
 import { ItemShopComponent } from './item-shop/item-shop.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+    InMemoryDataService, { dataEncapsulation: false })
   ],
   declarations: [
     AppComponent,
@@ -27,8 +34,11 @@ import { ItemShopComponent } from './item-shop/item-shop.component';
     MessagesComponent,
     ItemsComponent,
     ItemDetailComponent,
-    ItemShopComponent
+    ItemShopComponent,
+    HeroSearchComponent
   ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
+
+
