@@ -30,4 +30,18 @@ export class ItemsComponent implements OnInit {
     this.itemService.getItems()
         .subscribe(items => this.items = items);
   }
+
+  Add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.itemService.AddItem({ name } as Item)
+      .subscribe(item => {
+        this.items.push(item);
+      });
+  }
+
+  delete(item: Item): void {
+    this.items = this.items.filter(h => h !== item);
+    this.itemService.deleteItem(item).subscribe();
+  }
 }

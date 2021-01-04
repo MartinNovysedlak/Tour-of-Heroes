@@ -3,7 +3,19 @@
     <li *ngFor="let item of items"
     [class.selected]="item === selectedItem"
     (click)="onSelect(item)" routerLink="/itemdetail/{{item.id}}">
-    
-    <span class="badge">{{item.id}}</span> {{item.name}} {{item.price}}
+    <a>
+    <span class="badge">{{item.id}}</span> 
+    {{item.name}} {{item.price}}
+  </a>
+    <button class="delete" title="Delete item" (click)="delete(item)">x</button>
   </li>
 </ul>
+<div>
+  <label>Item name:
+    <input #itemName />
+  </label>
+  <button (click)="Add(itemName.value); itemName.value=''">
+    Add
+  </button>
+</div>
+<app-item-search></app-item-search>
