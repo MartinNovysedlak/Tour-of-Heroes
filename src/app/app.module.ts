@@ -37,7 +37,7 @@ import { ItemSearchComponent } from './item-search/item-search.component';
     ItemDetailComponent,
     ItemShopComponent,
     HeroSearchComponent,
-    ItemSearchComponent
+    ItemSearchComponent,
   ],
   bootstrap: [ AppComponent ]
 })

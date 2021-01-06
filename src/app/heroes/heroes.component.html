@@ -1,4 +1,13 @@
 <h2>My Heroes</h2>
+<div class="dropdown">
+  <button class="dropbtn">{{sortBy}}</button>
+  <div class="dropdown-content">
+    <a (click)="sortHero('name')">Name</a>
+    <a (click)="sortHero('id')">Id</a>
+    <a (click)="sortHero('money')">Money</a>
+    <a (click)="sortHero('life')">Life</a>
+  </div>
+</div>
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
     <a routerLink="/detail/{{hero.id}}">

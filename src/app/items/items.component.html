@@ -1,4 +1,12 @@
 <h2>My Items</h2>
+<div class="dropdown">
+  <button class="dropbtn">{{sortBy}}</button>
+  <div class="dropdown-content">
+    <a (click)="sortItem('name')">Name</a>
+    <a (click)="sortItem('id')">Id</a>
+    <a (click)="sortItem('price')">Price</a>
+  </div>
+</div>
 <ul class="items">
     <li *ngFor="let item of items"
     [class.selected]="item === selectedItem"

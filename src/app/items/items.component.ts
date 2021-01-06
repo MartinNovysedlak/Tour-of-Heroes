@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from './item';
-import { ITEMS } from './mock-items';
 import { ItemService } from '../item.service';
 import { MessageService } from '../message.service';
 
@@ -14,6 +13,7 @@ export class ItemsComponent implements OnInit {
 
   items: Item[];
   selectedItem: Item;
+  sortBy: string = 'id';
 
   constructor(private itemService: ItemService, private messageService: MessageService) {}
 
@@ -23,7 +23,7 @@ export class ItemsComponent implements OnInit {
 
   onSelect(item: Item): void {
     this.selectedItem = item;
-    this.messageService.add(`HeroesComponent: Selected hero id=${item.id}`);
+    this.messageService.add(`itemsComponent: Selected item id=${item.id}`);
   }
 
   getItems(): void {
@@ -43,5 +43,20 @@ export class ItemsComponent implements OnInit {
   delete(item: Item): void {
     this.items = this.items.filter(h => h !== item);
     this.itemService.deleteItem(item).subscribe();
+  }
+
+  sortItem(sortBy: string){
+    this.sortBy = sortBy
+    this.sort();
+  }
+  sort() {
+    if(this.sortBy === 'name')
+      this.items.sort((a,b) => a.name.localeCompare(b.name));
+
+    if(this.sortBy === 'id')
+      this.items.sort((a,b) => a.id > b.id ? 1 : -1);
+
+    if(this.sortBy === 'price')
+      this.items.sort((a,b) => a.price > b.price ? 1 : -1);
   }
 }
