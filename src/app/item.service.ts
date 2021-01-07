@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Item } from './items/item';
-import { ITEMS } from './items/mock-items';
 import { Observable, of } from 'rxjs';
 import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';

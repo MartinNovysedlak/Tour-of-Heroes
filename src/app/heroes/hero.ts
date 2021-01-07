@@ -1,8 +1,12 @@
 import { Item } from '../items/item';
-export interface Hero {
-    id: number;
-    name: string;
-    items: Item[];
-    money: number;
-    life: number;
-  }
+export class Hero {
+
+  constructor(
+    public id: number,
+    public name: string,
+    public items: Item[],
+    public money: number,
+    public life: number,
+    public strength: number
+  ){}
+}
