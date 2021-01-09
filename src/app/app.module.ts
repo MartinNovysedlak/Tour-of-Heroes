@@ -19,6 +19,8 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { ItemSearchComponent } from './item-search/item-search.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
 import { ItemFormComponent } from './item-form/item-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   imports: [
@@ -27,7 +29,9 @@ import { ItemFormComponent } from './item-form/item-form.component';
     AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
-    InMemoryDataService, { dataEncapsulation: false })
+    InMemoryDataService, { dataEncapsulation: false }),
+    BrowserAnimationsModule,
+    MatSliderModule,
   ],
   declarations: [
     AppComponent,
