@@ -19,6 +19,6 @@
                  name="money" [(ngModel)]="model.price">
         </div>
 
-        <button type="submit" (click)="Submit()" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+        <button routerLink="/items" type="submit" (click)="Submit()" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
     </form>
   </div>

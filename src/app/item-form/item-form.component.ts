@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { ItemService } from './../item.service';
 import { Item } from '../items/item';
 import { Component, OnInit } from '@angular/core';
@@ -18,5 +19,6 @@ export class ItemFormComponent implements OnInit {
 
   Submit():void {
     this.itemService.AddItem(this.model).subscribe();
+    
  }
 }

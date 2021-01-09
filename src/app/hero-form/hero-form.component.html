@@ -43,6 +43,6 @@
                  Must be number from range 0-10.
             </div>
         </div>
-        <button type="submit" (click)="submit()" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+        <button routerLink="/heroes" type="submit" (click)="submit()" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
     </form>
   </div>
