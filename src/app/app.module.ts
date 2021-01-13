@@ -22,6 +22,7 @@ import { ItemFormComponent } from './item-form/item-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 
+
 @NgModule({
   imports: [
     BrowserModule,

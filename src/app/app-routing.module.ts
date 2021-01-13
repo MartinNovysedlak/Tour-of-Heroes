@@ -1,3 +1,4 @@
+
 import { ItemFormComponent } from './item-form/item-form.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
 import { ItemShopComponent } from './item-shop/item-shop.component';
@@ -10,7 +11,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
 
-const routes: Routes = [
+const routes: Routes = [ 
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'detail/:id', component: HeroDetailComponent },
