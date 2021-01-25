@@ -21,6 +21,7 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
 import { ItemFormComponent } from './item-form/item-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { MatSliderModule } from '@angular/material/slider';
     ItemSearchComponent,
     HeroFormComponent,
     ItemFormComponent,
+    LoginComponent,
   ],
   providers: [],
   bootstrap: [ AppComponent ]
